@@ -45,11 +45,11 @@ canvas{
 }
 
     
-@media (max-width:1290px){
+@media all and (max-width:1290px){
    .r{display: none;} 
 }
 
-@media (max-width:890px){
+@media all and (max-width:890px){
    .top_nav li{
     
     margin: 10px 5px; }
@@ -67,7 +67,7 @@ canvas{
     }
  }
 
- @media (max-width:890px){
+@media all and (max-width:890px){
    .top_nav li{
     
     margin: 10px 5px; }
@@ -78,7 +78,7 @@ canvas{
 }   
     
 }
- @media (max-width:780px){
+@media all and (max-width:780px){
    .menu{
     
    display: none; }
@@ -99,7 +99,7 @@ canvas{
   -webkit-text-fill-color: transparent;
 }
 }
-@media (max-width:535px ){
+@media all and (max-width:535px ){
   a#gototop {
 	display: none;
 }
@@ -550,7 +550,7 @@ input{
     width: 50%
    
 }
-@media (max-width:890px){
+@media all and(max-width:890px){
 .box-2  {
     width: 100%
    
@@ -1002,7 +1002,7 @@ margin:0px auto;
 .center-block{display:block;margin-right:auto;margin-left:auto}
 
 
-@media (min-width: 640px) {
+@media all and(min-width: 640px) {
   .Steps {
     display: flex;
   }
@@ -1045,7 +1045,7 @@ margin:0px auto;
 .Steps div:nth-child(1):after {
   border-color: #117ec3 transparent transparent transparent;
 }
-@media (min-width: 640px) {
+@media all and (min-width: 640px) {
   .Steps div:nth-child(1):after {
     border-color: transparent transparent transparent #117ec3;
   }
@@ -1056,7 +1056,7 @@ margin:0px auto;
 .Steps div:nth-child(2):after {
   border-color: #1491e1 transparent transparent transparent;
 }
-@media (min-width: 640px) {
+@media all and(min-width: 640px) {
   .Steps div:nth-child(2):after {
     border-color: transparent transparent transparent #1491e1;
   }
@@ -1067,7 +1067,7 @@ margin:0px auto;
 .Steps div:nth-child(3):after {
   border-color: #2ba1eb transparent transparent transparent;
 }
-@media (min-width: 640px) {
+@media all and (min-width: 640px) {
   .Steps div:nth-child(3):after {
     border-color: transparent transparent transparent #2ba1eb;
   }
@@ -1078,7 +1078,7 @@ margin:0px auto;
 .Steps div:nth-child(4):after {
   border-color: #49afef transparent transparent transparent;
 }
-@media (min-width: 640px) {
+@media all and (min-width: 640px) {
   .Steps div:nth-child(4):after {
     border-color: transparent transparent transparent #49afef;
   }
@@ -1100,7 +1100,7 @@ margin:0px auto;
 .Steps div:nth-child(4):after {
   content: none;
 }
-@media (min-width: 640px) {
+@media all and (min-width: 640px) {
   .Steps div:after {
     bottom: 50%;
     right: -20px;
@@ -1244,7 +1244,7 @@ main{
     
 }
 
-@media (max-width:735px){
+@media all and (max-width:735px){
     #carousel div.prevLeftSecond {
   display:none;
     
@@ -1504,7 +1504,7 @@ center{
 	padding: 0    ;
     flex-direction: row;
 }
-@media (max-width:890px){
+@media all and (max-width:890px){
 .box-3  {
     width: 100%
    
