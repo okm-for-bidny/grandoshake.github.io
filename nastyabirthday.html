@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <style>figure{margin:0}.tmblr-iframe{position:absolute}.tmblr-iframe.hide{display:none}.tmblr-iframe--amp-cta-button{visibility:hidden;position:fixed;bottom:10px;left:50%;transform:translateX(-50%);z-index:100}.tmblr-iframe--amp-cta-button.tmblr-iframe--loaded{visibility:visible;animation:iframe-app-cta-transition .2s ease-out}</style><link rel="shortcut icon" type="image/x-icon" href="https://scontent.cdninstagram.com/t51.2885-15/sh0.08/e35/p640x640/26183414_2250053135020723_6754898248437071872_n.jpg" />
+  <link rel="mask-icon" type="" href="https://scontent.cdninstagram.com/t51.2885-15/sh0.08/e35/p640x640/26183414_2250053135020723_6754898248437071872_n.jpg" color="#111" />
+  <title>С Днем рождения!</title>
+
+  
+  
+  
+  <link rel='stylesheet prefetch' href='https://raw.githubusercontent.com/JohnBlazek/codepen-resources/master/3d-carousel/css/stylesheet.css'>
+
+      <style>
+          @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
+@import url(https://fonts.googleapis.com/css?family=Teko:700);
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,800);
+          
+      html, body{ background-color:#1a948d; }	
+:root {
+  --background-gradient: linear-gradient(to bottom right, #6E2E8E 0%, #0B9FBD 100%);
+  --container-gradient: radial-gradient(circle at 10% 10%, rgba(255, 255, 255, 0.001) 0%, rgba(0, 0, 0, 0.4) 50%);
+  --shadow: 0 0 60px 0px rgba(0, 0, 0, 0.3);
+  --anim-speed: 1.2s;
+  --anim-spin-duration: 2.4s; /* Can't use calc here, Firefox bug: https://bugzilla.mozilla.org/show_bug.cgi?id=956573 */
+}
+body, .spinner, .spinner-dial {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body {
+ 
+  margin: 0;
+  padding: 0;
+	  background: var(--background-gradient);
+}
+.spinner {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: var(--container-gradient);
+  box-shadow: var(--shadow);
+  animation: pulse var(--anim-speed) infinite alternate;
+}
+.spinner-dial {
+  width: 78%;
+  height: 78%;
+  border-radius: 50%;
+  animation: pulse var(--anim-speed) infinite alternate;
+  animation-delay: calc(var(--anim-speed) / 4);
+}
+.spinner-dial::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: var(--background-gradient);
+  border-radius: 50%;
+  animation: rotate var(--anim-spin-duration) infinite linear;
+}
+.spinner-nub {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 55%;
+  height: 55%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: var(--container-gradient);
+  background-size: 120%;
+  background-position: center;
+}
+.spinner-nub::after {
+  content: '';
+  width: 40%;
+  height: 40%;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.7);
+  animation: pulse var(--anim-speed) infinite alternate;
+  animation-delay: calc(var(--anim-speed) / 4);
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  
+  100% {
+    transform: scale(1.1);
+  }
+}
+body
+{ 
+	
+	width:100%;
+	
+	height:100%;
+	min-height:1000px;
+	overflow:hidden;
+	font-family: 'quicksandlight', Helvetica, Arial;
+	color:#FFFFFF;
+	text-shadow: -1px -1px 4px rgba(0, 0, 0, .35);
+    filter: dropshadow(color=#000000, offx=1, offy=1);
+}
+header
+{
+	bottom:1px;
+    left: 1px;
+	position:absolute;
+	z-index:5;
+	width:420px;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+         footer
+{
+	bottom:1px;
+    right: 5px;
+	position:absolute;
+	z-index:5;
+	
+	padding-top:10px;
+	padding-bottom:10px;
+}
+          
+          footer img{
+              width: 50px;
+              background-color: white;
+              border-radius: 50px;
+          }
+           footer img:hover{
+              width: 50px;
+              background-color: blue;
+              border-radius: 50px;
+          }
+h1{
+	
+	font-size:36px;
+	letter-spacing:-2.5px;
+	margin-left:30px;
+}
+h3{
+	
+	font-size:16px;
+	letter-spacing:-1.5px;
+	margin-top:5px;
+	margin-left:35px;
+}
+a
+{
+	color:rgba( 255, 255, 255, .65 );
+	text-decoration: none;
+}
+a:hover
+{
+	color:rgba( 255, 255, 255, 1 );
+}
+/* hardware accelatator class */	
+	.trans3d
+	{
+		-webkit-transform-style: preserve-3d;
+		-webkit-transform: translate3d(0, 0, 0);
+		-moz-transform-style: preserve-3d;
+		-moz-transform: translate3d(0, 0, 0);
+		-ms-transform-style:preserve-3d;
+		-ms-transform: translate3d(0, 0, 0);
+		transform-style:preserve-3d;
+		transform: translate3d(0, 0, 0);
+		/*-webkit-backface-visibility: hidden;
+		-moz-backface-visibility: hidden;
+		-ms-backface-visibility:hidden;
+		backface-visibility:hidden;*/
+	}
+	
+	#contentContainer
+	{
+		position:absolute;
+		margin-left:-500px;
+		margin-top:-550px;
+		left:50%;
+		top:50%;
+		width:1000px;
+		height:1000px;
+	}
+	
+	#carouselContainer
+	{
+		position:absolute;
+		margin-left:-500px;
+		margin-top:-550px;
+		left:50%;
+		top:50%;
+		width:1000px;
+		height:1000px;
+	}
+	
+	.carouselItem
+	{
+		width:320px;
+		height:130px;
+		position:absolute;
+		left:50%;
+		top:50%;
+		margin-left:-160px;
+		margin-top:-90px;
+		visibility:hidden;
+	}
+	
+	.carouselItemInner
+	{
+		width:320px;
+		height:130px;
+		position:absolute;
+		
+		
+		color:aqua;
+		font-size:72px;
+		left:50%;
+		top:50%;
+		margin-left:-160px;
+		margin-top:-90px;
+		text-align:center;
+		padding-top:50px;
+		
+	}
+          .carouselItemInner img{
+              position:absolute;
+              top:0;
+              left:0;
+              width: 100%;
+                  border:10px solid rgba(255, 255, 255, .5);
+              background-color:rgba(255, 255, 255, .75);
+    
+          }
+.a{
+  margin-bottom:500px;
+}
+          
+.hover-effect {
+    
+    text-align: center;
+    
+        -moz-transition: 0.3s;
+        -o-transition: 0.3s;
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+}
+    .hover-effect img {
+        -moz-transition: 0.3s;
+        -o-transition: 0.3s;
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+        
+    }
+    .hover-effect .description {
+          
+        position: relative;
+        top:0;
+        left:3%;
+        background: rgba(0,0,0,0.8);
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        -moz-transition: 0.3s;
+        -o-transition: 0.3s;
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+    }
+.hover-effect .description h2,
+.hover-effect .description p{
+   
+   margin: 0 auto;
+}
+        .hover-effect .description h2 {
+            font-size: 36px;
+            -moz-transform: translateY(-25px);
+            -ms-transform: translateY(-25px);
+            -o-transform: translateY(-25px);
+            -webkit-transform: translateY(-25px);
+            transform: translateY(-25px);
+            -moz-transition: 0.3s;
+            -o-transition: 0.3s;
+            -webkit-transition: 0.3s;
+            transition: 0.3s;
+            padding-top: 55px;
+        }
+    .hover-effect .description p {
+        font-size: 24px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        -moz-transform: translateY(25px);
+        -ms-transform: translateY(25px);
+        -o-transform: translateY(25px);
+        -webkit-transform: translateY(25px);
+        transform: translateY(25px);
+        -moz-transition: 0.3s;
+        -o-transition: 0.3s;
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+    }
+    .hover-effect:hover img {
+        -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+.hover-effect:hover .description{
+   opacity: 1;
+   cursor: pointer;
+}
+    .hover-effect:hover .description h2,
+    .hover-effect:hover .description p {
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+@media(max-width: 480px){
+   .hover-effect {
+    width: calc(100% - 30px);
+      float: none;
+}
+   .hover-effect .description h2{
+    font-size: 30px;
+}
+   .hover-effect .description p{
+    font-size: 18px;
+}
+}
+          
+    </style>
+
+  
+  
+  
+  
+</head>
+
+<body translate="no" >
+  <div class="spinner">
+  <div class="spinner-dial">
+  </div>
+  <div class="spinner-nub">
+  </div>
+</div>
+  <header>
+		<h1>С днем рождения! &#128521;
+ </h1>
+		<h3>P.S. Желаю счастья , ведь это смаое главное! Если человек счастлив то он и здоров и богат и успешен ! </h3>
+		
+	</header>
+	<footer> <a href="https://vk.com/50dbmslori"><img src="http://www.iconninja.com/files/238/378/475/social-vkontakte-vk-app-music-icon.svg" alt=""></a>
+	<a href="https://www.instagram.com/baby4killer/"><img src="https://instagram-brand.com/wp-content/uploads/2016/11/app-icon2.png" alt=""></a>
+	
+	</footer>
+	
+	<div id="contentContainer" class="trans3d"> 
+	<section id="carouselContainer" class="trans3d">
+		<figure id="item1" class="carouselItem trans3d"><div class="carouselItemInner trans3d">
+		<div class="hover-effect">
+		<img src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/23164133_334884036978921_4836834075304001536_n.jpg" alt="">
+		 <div class="description">
+            <h2>
+               С праздником !
+            </h2>
+            <p>
+                С днем рождения! Желаю, чтобы всё задуманное сбылось,  чтобы рядом с тобой всегда были самые близкие и надежные люди.
+
+
+
+            </p>
+        </div>
+
+
+    </div>
+		</div></figure>
+		<figure id="item2" class="carouselItem trans3d"><div class="carouselItemInner trans3d">
+           <div class="hover-effect">
+                     <img src="https://scontent.cdninstagram.com/t51.2885-15/sh0.08/e35/p640x640/26183414_2250053135020723_6754898248437071872_n.jpg" alt="">
+            		 <div class="description">
+            <h2>
+              Хорошего день рождения !
+            </h2>
+            <p>
+  А еще множества улыбок, уверенности в завтрашнем дне, успеха и огромного, необъятного, ежедневного и качественного женского счастья!
+
+
+
+            </p>
+        </div>
+
+
+    </div>
+            </div></figure>
+		<figure id="item3" class="carouselItem trans3d"><div class="carouselItemInner trans3d">
+           <div class="hover-effect">
+            <img src="https://scontent.cdninstagram.com/t51.2885-15/sh0.08/e35/p640x640/18381728_361014717634111_6142200281531678720_n.jpg" alt="">
+                        		 <div class="description">
+            <h2>
+             Ideal !
+            </h2>
+            <p>
+              Желаю крепкого здоровья, удачи, благополучия, добра, радости, любви, счастья, хорошего настроения, улыбок, ярких впечатлений. 
+            </p>
+        </div>
+
+
+    </div>
+            </div></figure>
+		<figure id="item4" class="carouselItem trans3d"><div class="carouselItemInner trans3d">
+           <div class="hover-effect">
+            <img src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/18444906_1293446037377390_6582189882523779072_n.jpg" alt="">
+                                    		 <div class="description">
+            <h2>
+             Не много пожеланий !
+            </h2>
+            <p>
+               Много хороших впечетлений и верных друзей !
+            </p>
+        </div>
+
+
+    </div>
+            </div></figure>
+		<figure id="item5" class="carouselItem trans3d"><div class="carouselItemInner trans3d">
+           <div class="hover-effect">
+            <img src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/18382555_1539062049450929_4882078351721758720_n.jpg" alt="">
+                                               		 <div class="description">
+            <h2>
+             Миллион, миллион алых роз!
+            </h2>
+            <p>
+             Дарю красивые цветочки!
+            </p>
+        </div>
+
+
+    </div>
+            </div></figure>
+		<figure id="item6" class="carouselItem trans3d"><div class="carouselItemInner trans3d">
+           <div class="hover-effect">
+            <img src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/18947442_1384456724941741_52502715313422336_n.jpg" alt="">
+                                                          		 <div class="description">
+            <h2>
+             С др.
+            </h2>
+            <p>
+              Ну главное полюби себя такую какая ты есть и не надо через чур самокритичной быть.)
+            </p>
+        </div>
+
+
+    </div>
+            </div></figure>
+		<figure id="item7" class="carouselItem trans3d"><div class="carouselItemInner trans3d">
+           <div class="hover-effect">
+            <img src="https://scontent.cdninstagram.com/t51.2885-15/sh0.08/e35/p640x640/23164219_2182775101949548_4586031306890018816_n.jpg" alt="">
+                                                                      		 <div class="description">
+            <h2>
+            С днюшкой!
+            </h2>
+            <p>
+              Всего самого - самого!
+            </p>
+        </div>
+
+
+    </div>
+            </div></figure>
+		<figure id="item8" class="carouselItem trans3d"><div class="carouselItemInner trans3d">
+           <div class="hover-effect">
+            <img src="https://scontent.cdninstagram.com/t51.2885-15/sh0.08/e35/p640x640/24253997_271617360027685_6087463607698718720_n.jpg" alt="">
+                                		 <div class="description">
+            <h2>
+            Еще не много поздравлений !
+            </h2>
+            <p>
+                Хорошего тебе настроения и отличного праздника!
+            </p>
+        </div>
+
+
+    </div>
+            </div></figure>
+		<figure id="item9" class="carouselItem trans3d"><div class="carouselItemInner trans3d">
+            <div class="hover-effect">
+            <img src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/23164133_334884036978921_4836834075304001536_n.jpg" alt="">
+                               		 <div class="description">
+            <h2>
+            Не много стихов !
+            </h2>
+            <p>
+              Желаю море позитива
+И самых преданных друзей.
+Чтоб жизнь — как яркая картина,
+А ты кайфуй, любуйся ей.
+
+
+
+
+            </p>
+        </div>
+
+
+    </div>
+            </div></figure>
+		<figure id="item10" class="carouselItem trans3d"><div class="carouselItemInner trans3d">
+                       <div class="hover-effect">
+            <img src="https://scontent.cdninstagram.com/t51.2885-15/sh0.08/e35/p640x640/24178084_507374446288253_501281198077640704_n.jpg" alt="">
+                               		 <div class="description">
+            <h2>
+           Еще не много стихов !
+            </h2>
+            <p>
+Чтоб радость, счастье и удача
+К тебе толпою в гости шли,
+Чтоб никакая неудача
+Не встала на твоем пути!
+
+
+
+
+            </p>
+        </div>
+
+
+    </div>
+            </div></figure>
+		<figure id="item11" class="carouselItem trans3d"><div class="carouselItemInner trans3d">
+                       <div class="hover-effect">
+
+            <img src="https://scontent.cdninstagram.com/t51.2885-15/sh0.08/e35/p640x640/26183414_2250053135020723_6754898248437071872_n.jpg" alt="">
+                                           		 <div class="description">
+            <h2>
+           Ну тип что то такое!
+            </h2>
+            <p>
+            Здоровья, сил душевных,
+Сюрпризов ежедневных,
+Тепла, добра, везения
+И счастья. С днем рождения!
+
+
+
+
+            </p>
+        </div>
+
+
+    </div>
+            </div></figure>
+		<figure id="item12" class="carouselItem trans3d"><div class="carouselItemInner trans3d">
+                       <div class="hover-effect">
+
+            <img src="https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/25011718_771695946359145_6665941298119180288_n.jpg" alt="">
+                                           		 <div class="description">
+            <h2>
+              Я нз как назвать этот пункт )) Креатив кончился )
+            </h2>
+            <p>
+            Эмоций — только радостных,
+Дней ярких и нетягостных,
+Любви крепчайшей, смеха,
+Во всех делах успеха!
+
+
+
+
+            </p>
+        </div>
+
+
+    </div>
+            </div></figure>	
+	</section>
+	</div>
+<div class="a"></div>
+ 		
+  
+  <script src='https://raw.githubusercontent.com/JohnBlazek/codepen-resources/master/3d-carousel/js/libs.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+
+    <script >
+   
+		var w, container, carousel, item, radius, itemLength, rY, ticker, fps; 
+		var mouseX = 0;
+		var mouseY = 0;
+		var mouseZ = 0;
+		var addX = 0;
+		
+		
+		
+		var fps_counter = {
+			
+			tick: function () 
+			{
+				
+				this.times = this.times.concat(+new Date());
+				var seconds, times = this.times;
+        
+				if (times.length > this.span + 1) 
+				{
+					times.shift(); // ditch the oldest time
+					seconds = (times[times.length - 1] - times[0]) / 1000;
+					return Math.round(this.span / seconds);
+				} 
+				else return null;
+			},
+ 
+			times: [],
+			span: 20
+		};
+		var counter = Object.create(fps_counter);
+		
+		
+		
+		$(document).ready( init )
+		
+		function init()
+		{
+			w = $(window);
+			container = $( '#contentContainer' );
+			carousel = $( '#carouselContainer' );
+			item = $( '.carouselItem' );
+			itemLength = $( '.carouselItem' ).length;
+			fps = $('#fps');
+			rY = 360 / itemLength;
+			radius = Math.round( (250) / Math.tan( Math.PI / itemLength ) );
+			
+			// set container 3d props
+			TweenMax.set(container, {perspective:600})
+			TweenMax.set(carousel, {z:-(radius)})
+			
+			// create carousel item props
+			
+			for ( var i = 0; i < itemLength; i++ )
+			{
+				var $item = item.eq(i);
+				var $block = $item.find('.carouselItemInner');
+				
+        
+        TweenMax.set($item, {rotationY:rY * i, z:radius, transformOrigin:"50% 50% " + -radius + "px"});
+				
+				animateIn( $item, $block )						
+			}
+			
+			
+			window.addEventListener( "mousemove", onMouseMove, false );
+			ticker = setInterval( looper, 1000/60 );			
+		}
+		
+		function animateIn( $item, $block )
+		{
+			var $nrX = 360 * getRandomInt(2);
+			var $nrY = 360 * getRandomInt(2);
+				
+			var $nx = -(2000) + getRandomInt( 4000 )
+			var $ny = -(2000) + getRandomInt( 4000 )
+			var $nz = -4
+			000 +  getRandomInt( 4000 )
+				
+			var $s = 1.5 + (getRandomInt( 10 ) * .1)
+			var $d = 1 - (getRandomInt( 8 ) * .1)
+			
+			TweenMax.set( $item, { autoAlpha:1, delay:$d } )	
+			TweenMax.set( $block, { z:$nz, rotationY:$nrY, rotationX:$nrX, x:$nx, y:$ny, autoAlpha:0} )
+			TweenMax.to( $block, $s, { delay:$d, rotationY:0, rotationX:0, z:0,  ease:Expo.easeInOut} )
+			TweenMax.to( $block, $s-.5, { delay:$d, x:0, y:0, autoAlpha:1, ease:Expo.easeInOut} )
+		}
+		
+		function onMouseMove(event)
+		{
+			mouseX = -(-(window.innerWidth * .5) + event.pageX) * .0025;
+			mouseY = -(-(window.innerHeight * .5) + event.pageY ) * .01;
+			mouseZ = -(radius) - (Math.abs(-(window.innerHeight * .5) + event.pageY ) - 200);
+		}
+		
+		// loops and sets the carousel 3d properties
+		function looper()
+		{
+			addX += mouseX
+			TweenMax.to( carousel, 1, { rotationY:addX, rotationX:mouseY, ease:Quint.easeOut } )
+			TweenMax.set( carousel, {z:mouseZ } )
+			fps.text( 'Framerate: ' + counter.tick() + '/60 FPS' )	
+		}
+		
+		function getRandomInt( $n )
+		{
+			return Math.floor((Math.random()*$n)+1);	
+		}
+  </script>
+
+  
+     
+
+
+</body>
+</html>
